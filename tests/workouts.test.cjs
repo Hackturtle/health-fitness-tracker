@@ -1,0 +1,31 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const os=require('node:os');
+const {execFileSync}=require('node:child_process');
+const temp=fs.mkdtempSync(path.join(os.tmpdir(),'fitness-workout-tests-'));
+try {
+ execFileSync(process.execPath,['node_modules/typescript/bin/tsc','--outDir',temp,'--module','commonjs','--target','ES2022','--skipLibCheck','--esModuleInterop','lib/workouts.ts','lib/fitness.ts','lib/exercises.ts'],{stdio:'pipe'});
+ const {exerciseLibrary}=require(path.join(temp,'exercises.js'));
+ const {cloneMovements,workingCount,validateWorkout,previousMovement}=require(path.join(temp,'workouts.js'));
+ const {summarize,makeDemo}=require(path.join(temp,'fitness.js'));
+ assert.equal(new Set(exerciseLibrary.map(e=>e.id)).size,exerciseLibrary.length);
+ assert.ok(exerciseLibrary.length>=140);
+ const exercise=exerciseLibrary.find(e=>e.name==='Incline bench press');
+ const movement={id:'m',exercise,basis:'Total weight',increment:2.5,sets:[{id:'s1',kg:20,reps:10,kind:'warmup'},{id:'s2',kg:60,reps:8,kind:'working'}]};
+ const draft={name:'Chest',date:'2026-10-04',exercises:[movement]};
+ assert.equal(validateWorkout(draft,'2026-10-04'),null);
+ for(const bad of [{name:''},{date:'2026-02-31'},{date:'2026-10-05'},{exercises:[]}])assert.ok(validateWorkout({...draft,...bad},'2026-10-04'));
+ for(const patch of [{kg:null},{kg:-1},{kg:NaN},{reps:null},{reps:0},{reps:2.5}])assert.ok(validateWorkout({...draft,exercises:[{...movement,sets:[{...movement.sets[1],...patch}]}]},'2026-10-04'));
+ const copy=cloneMovements([movement]);copy[0].sets[0].kg=999;assert.equal(movement.sets[0].kg,20);assert.notEqual(copy[0].id,movement.id);assert.notEqual(copy[0].sets[0].id,movement.sets[0].id);
+ const entry={id:'old',topic:'workouts',label:'Chest',date:'2026-10-01',value:1,workout:[movement]};
+ assert.equal(workingCount(entry),1);assert.equal(summarize([entry]).sets,1);
+ assert.equal(previousMovement([entry],movement,'2026-10-04').date,'2026-10-01');
+ assert.equal(previousMovement([entry],{...movement,basis:'Per side'},'2026-10-04'),null);
+ assert.equal(previousMovement([entry],movement,'2026-09-30'),null);
+ assert.equal(previousMovement([entry],movement,'2026-10-04','old'),null);
+ assert.equal(previousMovement([entry,{...entry,id:'new',date:'2026-10-03'}],movement,'2026-10-04').date,'2026-10-03');
+ assert.equal(summarize([{...entry,workout:[{...movement,sets:movement.sets.map(s=>({...s,kind:'warmup'}))}]}]).sets,0);
+ const seeded=makeDemo(new Date(2026,9,4));assert.ok(previousMovement(seeded,movement,'2026-10-04'));
+ console.log(`PASS: ${exerciseLibrary.length} unique exercises; validation, independent template copies, working-set counts and previous-performance matching.`);
+} finally {fs.rmSync(temp,{recursive:true,force:true});}

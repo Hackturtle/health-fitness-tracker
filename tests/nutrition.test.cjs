@@ -1,0 +1,22 @@
+const {tmpdir}=process.getBuiltinModule('node:os');
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),ts=require('typescript');
+const cache={};function load(file){file=path.resolve(file);if(cache[file])return cache[file];const mod={exports:{}};cache[file]=mod.exports;new Function('require','module','exports',ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText)(name=>name.startsWith('.')?load(path.resolve(path.dirname(file),name+'.ts')):require(name),mod,mod.exports);return mod.exports;}
+const n=load('lib/nutrition.ts'),f=load('lib/fitness.ts'),exp=load('lib/fitness-export.ts');
+const id=i=>`00000000-0000-4000-8000-${String(i).padStart(12,'0')}`;
+const oats={name:'Example oats',unit:'g',preparation:'raw',kcal:380,protein:12,carbs:60,fat:8};
+const milk={name:'Example milk',unit:'ml',preparation:'as_sold',kcal:64,protein:3.4,carbs:4.8,fat:3.6};
+const meal={name:'Porridge',notes:'Test',items:[{id:id(1),foodId:id(2),food:oats,quantity:250},{id:id(3),foodId:id(4),food:milk,quantity:200}]};
+assert.deepEqual(n.mealTotals(meal.items),{kcal:1078,protein:36.8,carbs:159.6,fat:27.2});
+const entry=n.mealEntry(id(5),'2026-10-10',meal);oats.kcal=999;assert.equal(entry.value,1078);assert.equal(entry.nutrition.items[0].food.kcal,380);
+assert.equal(n.validMealDate('2026-02-30'),false);assert.equal(n.validMealDate('2026-10-12',new Date('2026-10-11T12:00:00')),false);assert.equal(n.validMealDate('2020-10-10'),true);
+for(const q of [0,-1,Infinity,10001])assert.equal(n.mealSchema.safeParse({...meal,items:[{...meal.items[0],quantity:q}]}).success,false);
+assert.equal(n.foodSchema.safeParse({...milk,carbs:null}).success,false);assert.equal(n.foodSchema.safeParse({...milk,unit:'cups'}).success,false);
+assert.equal(n.mealSchema.safeParse({...meal,items:[meal.items[0],meal.items[0]]}).success,false);
+const cooked=n.mealEntry(id(6),'2026-10-10',{name:'Cooked rice',notes:'',items:[{id:id(7),foodId:id(8),food:{...milk,name:'Cooked rice',unit:'g',preparation:'cooked',kcal:130,carbs:28},quantity:200}]});assert.equal(cooked.value,260);
+assert.equal(f.summarize([entry,cooked]).calories,1338);assert.equal(f.summarize([entry,{...cooked,date:'2026-10-09'}]).calories,669);
+const options={range:{start:'2026-10-01',end:'2026-10-10',label:'October'},unit:'kg',heightCm:null};const data=exp.exportData([entry,cooked,{...entry,id:id(9),date:'2020-10-10'}],options);
+assert.equal(data.nutrition.length,3);assert.equal(data.nutritionDaily[0][1],1338);assert.equal(data.nutrition[0][3],'Raw / dry');assert.equal(data.nutrition[1][5],'ml');
+const {unzipSync,strFromU8}=require('fflate');const z=unzipSync(exp.workbookArchive(new Uint8Array(fs.readFileSync('public/fitness-export-template.xlsx')),[entry,cooked],options));
+assert.match(strFromU8(z['xl/worksheets/sheet5.xml']),/E6\*M6\/100/);assert.match(strFromU8(z['xl/worksheets/sheet5.xml']),/SUMIF/);assert.match(strFromU8(z['xl/drawings/charts/chart4.xml']),/1338/);
+fs.writeFileSync(path.join(tmpdir(),'fitness-nutrition-check.xlsx'),exp.workbookArchive(new Uint8Array(fs.readFileSync('public/fitness-export-template.xlsx')),[entry,cooked],options));
+console.log('PASS: label portions, g/ml, raw/cooked, snapshots, invalid amounts/dates, daily totals, range filtering and nutrition exports.');

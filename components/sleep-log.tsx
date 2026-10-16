@@ -1,0 +1,41 @@
+"use client";
+import {inRange,type DateRange} from '@/lib/date-range';
+import {useEffect,useRef,useState,type FormEvent} from 'react';
+import {Moon,Plus,Pencil,Trash2,Check} from 'lucide-react';
+import {toast} from 'sonner';
+import {Dialog,DialogContent,DialogTitle,DialogDescription} from '@/components/ui/dialog';
+import {AlertDialog,AlertDialogContent,AlertDialogTitle,AlertDialogDescription,AlertDialogFooter,AlertDialogCancel,AlertDialogAction} from '@/components/ui/alert-dialog';
+import {Select,SelectTrigger,SelectValue,SelectContent,SelectItem} from '@/components/ui/select';
+import {dateKey,inPeriod,type Entry,type Period} from '@/lib/fitness';
+import {durationMinutes,formatDuration,localDateTime,sleepQualities,validateSleep,type SleepDraft} from '@/lib/sleep';
+
+const dateLabel=(date:string)=>new Date(date+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+function timeLabel(time:string,zone:string){return new Date(time).toLocaleString('en-GB',{timeZone:zone,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});}
+export function SleepLog({open,onClose,entries,period,range,persisted,onSave,onDelete}:{open:boolean;onClose:()=>void;entries:Entry[];period:Period;range:DateRange;persisted:boolean;onSave:(e:Entry)=>Promise<void>;onDelete:(id:string)=>Promise<void>}){
+ const [draft,setDraft]=useState<SleepDraft|null>(null);
+ const [id,setId]=useState('');
+ const [busy,setBusy]=useState(false);
+ const locked=useRef(false);
+ const [error,setError]=useState('');
+ const [confirm,setConfirm]=useState<{title:string;description:string;run:()=>void}|null>(null);
+ useEffect(()=>{if(!draft)return;const warn=(e:BeforeUnloadEvent)=>{e.preventDefault();e.returnValue='';};window.addEventListener('beforeunload',warn);return ()=>window.removeEventListener('beforeunload',warn);},[!!draft]);
+ function leave(close:boolean){if(locked.current)return;const run=()=>{setDraft(null);setError('');if(close)onClose();};if(draft)setConfirm({title:'Discard this unfinished entry?',description:'Your saved sleep history will stay unchanged.',run});else run();}
+ function start(entry?:Entry){
+  const wake=entry?.sleep?new Date(entry.sleep.wakeAt):entry?new Date(entry.date+'T07:00'):new Date();
+  if(!entry){const now=new Date();wake.setHours(7,0,0,0);if(wake>now)wake.setTime(now.getTime());}
+  const bed=entry?.sleep?new Date(entry.sleep.bedtime):new Date(wake.getTime()-(entry?.value??8)*3600000);
+  setId(entry?.id??crypto.randomUUID());setError('');setDraft({bedtime:localDateTime(bed),wakeAt:localDateTime(wake),quality:entry?.sleep?.quality??'',notes:entry?.sleep?.notes??''});
+ }
+ async function perform(action:()=>Promise<void>){if(locked.current)return;locked.current=true;setBusy(true);setError('');try{await action();}catch(e){const message=e instanceof Error?e.message:'Could not save. Your entry is still here.';setError(message);toast.error(message);}finally{locked.current=false;setBusy(false);}}
+ function save(event:FormEvent){event.preventDefault();if(!draft)return;const problem=validateSleep(draft);if(problem){setError(problem);return;}
+  const date=draft.wakeAt.slice(0,10);
+  if(entries.some(e=>e.topic==='sleep'&&e.date===date&&e.id!==id)){setError('You already have an entry for this wake-up date. Edit it from your sleep log.');return;}
+  void perform(async()=>{await onSave({id,date,topic:'sleep',label:draft.quality?`${draft.quality} sleep`:'Sleep entry',value:durationMinutes(draft.bedtime,draft.wakeAt)/60,sleep:{bedtime:new Date(draft.bedtime).toISOString(),wakeAt:new Date(draft.wakeAt).toISOString(),timeZone:Intl.DateTimeFormat().resolvedOptions().timeZone,quality:draft.quality||null,notes:draft.notes.trim()}});setDraft(null);toast.success(persisted?'Sleep saved to your account':'Sleep added to the demo');});
+ }
+ const history=entries.filter(e=>e.topic==='sleep'&&inRange(e.date,range)).sort((a,b)=>b.date.localeCompare(a.date));
+ const average=history.length?history.reduce((n,e)=>n+e.value,0)/history.length:0;
+ const minutes=draft?durationMinutes(draft.bedtime,draft.wakeAt):0;
+ return <><Dialog open={open} onOpenChange={v=>{if(!v)leave(true)}}><DialogContent className="detail-dialog sleep-dialog"><DialogTitle className="detail-title">{draft?'Log your sleep':'Your sleep'}</DialogTitle><DialogDescription>Bedtime to wake-up, recorded on the day you wake up. One main sleep entry per day.</DialogDescription><p className="workout-demo">{persisted?'Personal logbook · Saved to your account.':'Demo mode · Changes reset on refresh.'}</p>
+ {draft?<form className="entry-form" onSubmit={save}><fieldset disabled={busy} className="sleep-fields"><label>Bedtime<input type="datetime-local" required value={draft.bedtime} onChange={e=>setDraft({...draft,bedtime:e.target.value})}/></label><label>Wake time<input type="datetime-local" required max={localDateTime(new Date())} value={draft.wakeAt} onChange={e=>setDraft({...draft,wakeAt:e.target.value})}/></label><div className="sleep-duration"><Moon size={22}/><div><strong>{Number.isFinite(minutes)&&minutes>0&&minutes<=1440?formatDuration(minutes/60):'—'}</strong><span>Time in bed</span></div></div><p className="workout-meta">Calculated from these times; it includes time spent awake. Dates and times use your device’s timezone.</p><label>How did it feel? <span className="optional">Optional</span><Select value={draft.quality||'unset'} onValueChange={v=>setDraft({...draft,quality:v==='unset'?'':v})}><SelectTrigger aria-label="Sleep quality"><SelectValue/></SelectTrigger><SelectContent><SelectItem value="unset">Not recorded</SelectItem>{sleepQualities.map(q=><SelectItem key={q} value={q}>{q}</SelectItem>)}</SelectContent></Select></label><label>Notes <span className="optional">Optional</span><textarea rows={3} maxLength={1000} value={draft.notes} placeholder="e.g. Woke twice, felt rested in the morning" onChange={e=>setDraft({...draft,notes:e.target.value})}/></label>{error&&<p role="alert" className="workout-error">{error}</p>}<div className="form-actions"><button type="button" className="secondary" onClick={()=>leave(false)}>Cancel</button><button className="primary" type="submit"><Check size={16}/>{busy?'Saving…':'Save sleep'}</button></div></fieldset></form>:<><button className="primary" disabled={busy} onClick={()=>start()}><Plus size={17}/> Log sleep</button><div className="sleep-summary"><b>{average?formatDuration(average):'—'}</b><span>Average time in bed · {history.length} {history.length===1?'entry':'entries'} · {range.label}</span></div>{error&&<p role="alert" className="workout-error">{error}</p>}<div className="workout-history">{history.length?history.map(e=><article key={e.id} className="workout-log"><div className="workout-log-title"><h3>{formatDuration(e.value)}</h3><span>{dateLabel(e.date)}</span></div><p>{e.sleep?`${timeLabel(e.sleep.bedtime,e.sleep.timeZone)} – ${timeLabel(e.sleep.wakeAt,e.sleep.timeZone)}`:'Sample duration'}{e.sleep?.quality?` · ${e.sleep.quality}`:''}</p>{e.sleep&&<small className="workout-meta">{e.sleep.timeZone}</small>}{e.sleep?.notes&&<p className="sleep-notes">{e.sleep.notes}</p>}<div className="workout-actions"><button className="secondary" disabled={busy} onClick={()=>start(e)}><Pencil size={15}/> Edit</button><button className="icon-action" disabled={busy} aria-label={`Delete sleep for ${e.date}`} onClick={()=>setConfirm({title:'Delete this sleep entry?',description:`${dateLabel(e.date)} · ${formatDuration(e.value)}. This will remove it from your history and summaries.`,run:()=>{void perform(async()=>{await onDelete(e.id);toast.success('Sleep entry deleted');});}})}><Trash2 size={17}/></button></div></article>):<div className="workout-empty"><Moon/><h3>No sleep logged in this period</h3><p>Add your bedtime and wake time to start your history.</p></div>}</div></>}
+ </DialogContent></Dialog><AlertDialog open={!!confirm} onOpenChange={v=>{if(!v)setConfirm(null)}}><AlertDialogContent><AlertDialogTitle>{confirm?.title}</AlertDialogTitle><AlertDialogDescription>{confirm?.description}</AlertDialogDescription><AlertDialogFooter><AlertDialogCancel>Keep it</AlertDialogCancel><AlertDialogAction onClick={()=>{confirm?.run();setConfirm(null);}}>Confirm</AlertDialogAction></AlertDialogFooter></AlertDialogContent></AlertDialog></>;
+}
