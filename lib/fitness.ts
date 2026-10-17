@@ -1,0 +1,13 @@
+import type { Movement } from './workouts';
+import { workingCount } from './workouts';
+import type { SleepDetails } from './sleep';
+import type {Meal} from './nutrition';
+export type Topic='workouts'|'nutrition'|'sleep'|'body';
+export type {Period} from './date-range';
+import {getDateRange,inRange,type Period} from './date-range';
+export type SetRow={exercise:string;kg:number;reps:number};
+export type Entry={id:string;date:string;topic:Topic;label:string;value:number;sets?:SetRow[];workout?:Movement[];protein?:number;carbs?:number;fat?:number;sleep?:SleepDetails;body?:{notes:string};nutrition?:Meal};
+export function dateKey(d:Date){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+export function inPeriod(date:string,period:Period,now:Date){return inRange(date,getDateRange(period,0,now,period==='all'?'0001-01-01':undefined))}
+export function makeDemo(now:Date):Entry[]{const out:Entry[]=[];for(let i=89;i>=0;i--){const d=new Date(now);d.setDate(d.getDate()-i);const date=dateKey(d);const add=(topic:Topic,label:string,value:number,extra:Partial<Entry>={})=>out.push({id:`demo-${topic}-${i}`,date,topic,label,value,...extra});add('sleep',i%4===0?'Fair sleep':'Good sleep',6.5+(i%7)*0.25);if(i%3===0)add('body','Weigh-in',Math.round((79.8-i*0.014+Math.sin(i)*0.2)*10)/10);if([1,2,4,5].includes(d.getDay())){const names:Record<number,string>={1:'Chest & triceps',2:'Back & biceps',4:'Shoulders & traps',5:'Legs'};const moves:Record<number,SetRow[]>={1:[{exercise:'Incline bench press',kg:60,reps:8},{exercise:'Triceps pushdown',kg:45,reps:10}],2:[{exercise:'Lat pulldown',kg:60,reps:8},{exercise:'Dumbbell curl',kg:14,reps:10}],4:[{exercise:'Lateral raise',kg:10,reps:12},{exercise:'Reverse fly',kg:25,reps:10}],5:[{exercise:'Leg press',kg:180,reps:8},{exercise:'Leg curl',kg:40,reps:10}]};add('workouts',names[d.getDay()],1,{sets:moves[d.getDay()]});}add('nutrition','Daily food log',2400+(i%5)*110,{protein:165+(i%5)*5,carbs:280+(i%4)*15,fat:70+(i%3)*5});}return out}
+export function summarize(entries:Entry[]){const of=(t:Topic)=>entries.filter(e=>e.topic===t);const meals=of('nutrition');const days=new Set(meals.map(e=>e.date)).size;const sleeps=of('sleep');const weights=of('body').sort((a,b)=>a.date.localeCompare(b.date));const workouts=of('workouts');return {workouts:workouts.length,sets:workouts.reduce((a,e)=>a+workingCount(e),0),calories:days?meals.reduce((a,e)=>a+e.value,0)/days:0,protein:days?meals.reduce((a,e)=>a+(e.protein??0),0)/days:0,sleep:sleeps.length?sleeps.reduce((a,e)=>a+e.value,0)/sleeps.length:0,nights:new Set(sleeps.map(e=>e.date)).size,weight:weights.at(-1)?.value??0,change:weights.length>1?weights[weights.length-1].value-weights[0].value:null}}

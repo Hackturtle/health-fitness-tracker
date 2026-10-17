@@ -1,0 +1,1435 @@
+[
+  {
+    "id": "6765d3cf-f9b9-5bac-94af-e3f54ac08208",
+    "name": "Almonds, whole kernels",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 554.0,
+    "protein": 21.2,
+    "carbs": 5.3,
+    "fat": 49.9,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "14-896",
+      "foodName": "Almonds, whole kernels",
+      "trace": []
+    }
+  },
+  {
+    "id": "d6d30551-c308-581f-aae0-cf02e97ce60d",
+    "name": "Apples, eating, raw, flesh and skin",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 51.0,
+    "protein": 0.6,
+    "carbs": 11.6,
+    "fat": 0.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "14-319",
+      "foodName": "Apples, eating, raw, flesh and skin",
+      "trace": []
+    }
+  },
+  {
+    "id": "512e422c-0e56-5353-b2bf-27c2ac323288",
+    "name": "Avocado, Hass, flesh only",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 171.0,
+    "protein": 1.8,
+    "carbs": 1.8,
+    "fat": 17.4,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "14-386",
+      "foodName": "Avocado, Hass, flesh only",
+      "trace": []
+    }
+  },
+  {
+    "id": "e650a851-1f5c-5411-9ced-818970571e10",
+    "name": "Bananas, flesh only",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 81.0,
+    "protein": 1.2,
+    "carbs": 20.3,
+    "fat": 0.1,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "14-318",
+      "foodName": "Bananas, flesh only",
+      "trace": []
+    }
+  },
+  {
+    "id": "7dc1ed11-8f4e-5d77-bcb1-70bbb0a00f37",
+    "name": "Beans, green, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 26.0,
+    "protein": 2.1,
+    "carbs": 4.0,
+    "fat": 0.3,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-515",
+      "foodName": "Beans, green, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "21926173-885b-5e17-a143-91654b1f5704",
+    "name": "Beans, green, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 24.0,
+    "protein": 2.1,
+    "carbs": 3.1,
+    "fat": 0.4,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-514",
+      "foodName": "Beans, green, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "9ddeac74-753e-594a-8e87-e4a653e9085a",
+    "name": "Beef, mince, extra lean, stewed",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 137.0,
+    "protein": 24.7,
+    "carbs": 0.0,
+    "fat": 4.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "18-507",
+      "foodName": "Beef, mince, extra lean, stewed",
+      "trace": []
+    }
+  },
+  {
+    "id": "af5672ba-9b96-5baf-a6c6-bbe45dec30bc",
+    "name": "Beef, mince, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 225.0,
+    "protein": 19.7,
+    "carbs": 0.0,
+    "fat": 16.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "18-469",
+      "foodName": "Beef, mince, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "068f5829-dcae-51b9-9071-4416ec5f6e95",
+    "name": "Beef, mince, raw, extra lean",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 130.0,
+    "protein": 21.9,
+    "carbs": 0.0,
+    "fat": 4.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "18-508",
+      "foodName": "Beef, mince, raw, extra lean",
+      "trace": []
+    }
+  },
+  {
+    "id": "5a9ce529-dbd4-5b7d-88d8-92e907573c5d",
+    "name": "Blueberries",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 40.0,
+    "protein": 0.9,
+    "carbs": 9.1,
+    "fat": 0.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "14-325",
+      "foodName": "Blueberries",
+      "trace": []
+    }
+  },
+  {
+    "id": "99fd0adf-7df8-588f-920e-6c4c08d9d9b7",
+    "name": "Bread, white, average",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 236.0,
+    "protein": 8.7,
+    "carbs": 48.7,
+    "fat": 2.1,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-1145",
+      "foodName": "Bread, white, average",
+      "trace": []
+    }
+  },
+  {
+    "id": "5d92bbc6-0ba1-5e3f-8515-107d4f382fb4",
+    "name": "Bread, wholemeal, average",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 217.0,
+    "protein": 9.4,
+    "carbs": 42.0,
+    "fat": 2.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-981",
+      "foodName": "Bread, wholemeal, average",
+      "trace": []
+    }
+  },
+  {
+    "id": "435ab9e5-54c8-5d8c-be77-948fafdb9b72",
+    "name": "Broccoli, green, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 28.0,
+    "protein": 3.3,
+    "carbs": 2.8,
+    "fat": 0.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-503",
+      "foodName": "Broccoli, green, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "697388bd-36fe-56c5-b48a-ce88ffa33d14",
+    "name": "Broccoli, green, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 34.0,
+    "protein": 4.3,
+    "carbs": 3.2,
+    "fat": 0.6,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-502",
+      "foodName": "Broccoli, green, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "0180eec5-1a19-5d1f-9fc7-feb11345b4ec",
+    "name": "Broccoli, green, steamed",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 34.0,
+    "protein": 4.1,
+    "carbs": 3.5,
+    "fat": 0.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-504",
+      "foodName": "Broccoli, green, steamed",
+      "trace": []
+    }
+  },
+  {
+    "id": "6af8ed51-e362-5cc5-9fd6-e324db3bc777",
+    "name": "Butter, salted",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 744.0,
+    "protein": 0.6,
+    "carbs": 0.6,
+    "fat": 82.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "17-685",
+      "foodName": "Butter, salted",
+      "trace": []
+    }
+  },
+  {
+    "id": "67568e18-6cc4-5251-a15e-cb0c72cd17d8",
+    "name": "Butter, unsalted",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 744.0,
+    "protein": 0.6,
+    "carbs": 0.6,
+    "fat": 82.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "17-661",
+      "foodName": "Butter, unsalted",
+      "trace": []
+    }
+  },
+  {
+    "id": "31511096-a711-58a4-8b0f-99f8d703d873",
+    "name": "Carrots, old, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 29.0,
+    "protein": 0.5,
+    "carbs": 6.0,
+    "fat": 0.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-497",
+      "foodName": "Carrots, old, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "b50cbf6a-e24d-5f97-ad3e-07345b17c1f1",
+    "name": "Carrots, old, microwaved",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 32.0,
+    "protein": 0.6,
+    "carbs": 7.5,
+    "fat": 0.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-498",
+      "foodName": "Carrots, old, microwaved",
+      "trace": []
+    }
+  },
+  {
+    "id": "d3b28e62-2934-51f3-b7be-995704b6b33e",
+    "name": "Carrots, old, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 34.0,
+    "protein": 0.5,
+    "carbs": 7.7,
+    "fat": 0.4,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-496",
+      "foodName": "Carrots, old, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "b2f00fe0-d391-5fb3-b0f3-b5ca9ce75d62",
+    "name": "Cauliflower, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 29.0,
+    "protein": 1.9,
+    "carbs": 3.5,
+    "fat": 0.9,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-513",
+      "foodName": "Cauliflower, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "2973de36-616a-5114-9949-1faa2cf45312",
+    "name": "Cauliflower, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 30.0,
+    "protein": 2.5,
+    "carbs": 4.4,
+    "fat": 0.4,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-512",
+      "foodName": "Cauliflower, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "ed08ca07-ad66-5366-9ddf-445cadca5ff7",
+    "name": "Cheese, cottage, plain",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 103.0,
+    "protein": 9.4,
+    "carbs": 3.1,
+    "fat": 6.0,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-539",
+      "foodName": "Cheese, cottage, plain",
+      "trace": []
+    }
+  },
+  {
+    "id": "fbba6952-cc85-5be5-a555-5631d4b5ab30",
+    "name": "Cheese, cottage, plain, reduced fat",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 68.0,
+    "protein": 10.6,
+    "carbs": 3.3,
+    "fat": 1.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-550",
+      "foodName": "Cheese, cottage, plain, reduced fat",
+      "trace": []
+    }
+  },
+  {
+    "id": "dcaec553-ec2f-5646-bfc6-de513b4ff83b",
+    "name": "Chicken, breast, grilled without skin, meat only",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 148.0,
+    "protein": 32.0,
+    "carbs": 0.0,
+    "fat": 2.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "18-323",
+      "foodName": "Chicken, breast, grilled without skin, meat only",
+      "trace": []
+    }
+  },
+  {
+    "id": "5f269e63-22bd-5a57-927f-7a6486ef6c04",
+    "name": "Chicken, dark meat, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 109.0,
+    "protein": 20.9,
+    "carbs": 0.0,
+    "fat": 2.8,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "18-289",
+      "foodName": "Chicken, dark meat, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "face862b-6109-567e-b3c9-abcad17c9675",
+    "name": "Chicken, dark meat, roasted",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 196.0,
+    "protein": 24.4,
+    "carbs": 0.0,
+    "fat": 10.9,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "18-329",
+      "foodName": "Chicken, dark meat, roasted",
+      "trace": []
+    }
+  },
+  {
+    "id": "bf5d8b43-36e2-5bf8-b459-84c5f226a531",
+    "name": "Chicken, light meat, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 106.0,
+    "protein": 24.0,
+    "carbs": 0.0,
+    "fat": 1.1,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "18-290",
+      "foodName": "Chicken, light meat, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "2d24cb1f-a006-50ea-9da2-bfd33b7c8817",
+    "name": "Chicken, light meat, roasted",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 153.0,
+    "protein": 30.2,
+    "carbs": 0.0,
+    "fat": 3.6,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "18-330",
+      "foodName": "Chicken, light meat, roasted",
+      "trace": []
+    }
+  },
+  {
+    "id": "004affff-40f0-52b1-bf65-795499bb057e",
+    "name": "Courgette, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 15.0,
+    "protein": 1.3,
+    "carbs": 1.8,
+    "fat": 0.3,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-628",
+      "foodName": "Courgette, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "2662b485-b18c-5dec-a73b-ee4f70861153",
+    "name": "Courgette, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 16.0,
+    "protein": 1.3,
+    "carbs": 2.3,
+    "fat": 0.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-627",
+      "foodName": "Courgette, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "a9047116-8df5-525c-92fb-6e401505b936",
+    "name": "Couscous, plain, cooked",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 178.0,
+    "protein": 7.2,
+    "carbs": 37.5,
+    "fat": 1.0,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-902",
+      "foodName": "Couscous, plain, cooked",
+      "trace": []
+    }
+  },
+  {
+    "id": "445b8311-e61c-557a-aee7-ed400be0f31b",
+    "name": "Couscous, plain, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 364.0,
+    "protein": 12.0,
+    "carbs": 79.2,
+    "fat": 2.1,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-901",
+      "foodName": "Couscous, plain, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "26b9abff-b379-53e1-b39c-b6e9eb4b9263",
+    "name": "Cucumber, raw, flesh and skin",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 14.0,
+    "protein": 1.0,
+    "carbs": 1.2,
+    "fat": 0.6,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-523",
+      "foodName": "Cucumber, raw, flesh and skin",
+      "trace": []
+    }
+  },
+  {
+    "id": "1531898d-d2d6-5306-9944-bbdc88bcdcd8",
+    "name": "Dates, dried, flesh and skin",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 235.0,
+    "protein": 2.4,
+    "carbs": 58.7,
+    "fat": 0.6,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "14-394",
+      "foodName": "Dates, dried, flesh and skin",
+      "trace": []
+    }
+  },
+  {
+    "id": "3ff4555c-59d0-50b6-8ba4-5e4d851c3966",
+    "name": "Eggs, chicken, white, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 43.0,
+    "protein": 10.8,
+    "carbs": 0,
+    "fat": 0,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-938",
+      "foodName": "Eggs, chicken, white, raw",
+      "trace": [
+        "carbs",
+        "fat"
+      ]
+    }
+  },
+  {
+    "id": "c3b8e577-a2e3-5bb8-9850-118139a01e48",
+    "name": "Eggs, chicken, whole, boiled",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 143.0,
+    "protein": 14.1,
+    "carbs": 0,
+    "fat": 9.6,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-940",
+      "foodName": "Eggs, chicken, whole, boiled",
+      "trace": [
+        "carbs"
+      ]
+    }
+  },
+  {
+    "id": "40e00a4d-cecf-5cb2-9560-f554391898d1",
+    "name": "Eggs, chicken, whole, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 131.0,
+    "protein": 12.6,
+    "carbs": 0,
+    "fat": 9.0,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-937",
+      "foodName": "Eggs, chicken, whole, raw",
+      "trace": [
+        "carbs"
+      ]
+    }
+  },
+  {
+    "id": "3ed8bf42-c78d-5b56-9db9-b6383853f5a4",
+    "name": "Honey",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 288.0,
+    "protein": 0.4,
+    "carbs": 76.4,
+    "fat": 0.0,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "17-050",
+      "foodName": "Honey",
+      "trace": []
+    }
+  },
+  {
+    "id": "18c4747e-08d4-58f0-bff7-ad77e44ea475",
+    "name": "Kiwi fruit, flesh only, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 44.0,
+    "protein": 0.8,
+    "carbs": 8.6,
+    "fat": 0.9,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "14-371",
+      "foodName": "Kiwi fruit, flesh only, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "10b3b66f-1620-5d54-bcb0-8d6e9a78c0e8",
+    "name": "Lentils, red, split, dried, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 102.0,
+    "protein": 8.1,
+    "carbs": 16.9,
+    "fat": 0.7,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-658",
+      "foodName": "Lentils, red, split, dried, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "85e642b0-7bf8-5cdb-b626-34d3c447ec7d",
+    "name": "Lentils, red, split, dried, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 311.0,
+    "protein": 25.6,
+    "carbs": 51.2,
+    "fat": 1.8,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-657",
+      "foodName": "Lentils, red, split, dried, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "73cf2a36-2d68-5522-8bb1-57d4c51ed3f7",
+    "name": "Milk, semi-skimmed, pasteurised, average",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 46.0,
+    "protein": 3.5,
+    "carbs": 4.7,
+    "fat": 1.7,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-313",
+      "foodName": "Milk, semi-skimmed, pasteurised, average",
+      "trace": []
+    }
+  },
+  {
+    "id": "de146865-262a-5d0b-abe4-b8f4d538109b",
+    "name": "Milk, skimmed, pasteurised, average",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 34.0,
+    "protein": 3.5,
+    "carbs": 4.8,
+    "fat": 0.3,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-307",
+      "foodName": "Milk, skimmed, pasteurised, average",
+      "trace": []
+    }
+  },
+  {
+    "id": "8659781a-13f0-5ec9-a1bc-10fbfdad0651",
+    "name": "Milk, whole, pasteurised, average",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 63.0,
+    "protein": 3.4,
+    "carbs": 4.6,
+    "fat": 3.6,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-596",
+      "foodName": "Milk, whole, pasteurised, average",
+      "trace": []
+    }
+  },
+  {
+    "id": "ef7e5331-1e9e-5d89-9444-0b9d636f31dd",
+    "name": "Mushrooms, white, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 7.0,
+    "protein": 1.0,
+    "carbs": 0.3,
+    "fat": 0.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-505",
+      "foodName": "Mushrooms, white, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "17b63f4b-87fb-5d42-8182-14ca8304842b",
+    "name": "Mushrooms, white, stewed in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 9.0,
+    "protein": 1.4,
+    "carbs": 0.1,
+    "fat": 0.3,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-506",
+      "foodName": "Mushrooms, white, stewed in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "4de7c271-ba14-5093-85a7-f6890813f8cd",
+    "name": "Oil, olive",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 899.0,
+    "protein": 0,
+    "carbs": 0.0,
+    "fat": 99.9,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "17-038",
+      "foodName": "Oil, olive",
+      "trace": [
+        "protein"
+      ]
+    }
+  },
+  {
+    "id": "d69b29f1-e000-5622-ad12-38de9a07ef83",
+    "name": "Onions, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 25.0,
+    "protein": 0.7,
+    "carbs": 5.4,
+    "fat": 0.3,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-500",
+      "foodName": "Onions, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "fb1c16b5-ee8a-57f0-b434-d3ff3c3f50e5",
+    "name": "Onions, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 35.0,
+    "protein": 1.0,
+    "carbs": 8.0,
+    "fat": 0.1,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-499",
+      "foodName": "Onions, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "a1b355b6-741a-5e9e-be76-1f8b1ae8bbcd",
+    "name": "Pasta, white, dried, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 169.0,
+    "protein": 5.5,
+    "carbs": 37.2,
+    "fat": 0.8,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-1129",
+      "foodName": "Pasta, white, dried, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "96f926a7-1139-5b48-9730-79f359d3bf4f",
+    "name": "Pasta, white, dried, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 343.0,
+    "protein": 11.3,
+    "carbs": 75.6,
+    "fat": 1.6,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-716",
+      "foodName": "Pasta, white, dried, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "46523d63-c809-5532-8d65-629f017754a6",
+    "name": "Pasta, wholewheat, spaghetti, dried, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 134.0,
+    "protein": 5.2,
+    "carbs": 27.5,
+    "fat": 1.1,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-723",
+      "foodName": "Pasta, wholewheat, spaghetti, dried, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "bc5dff10-1749-5c63-acc0-a954c78accc2",
+    "name": "Pasta, wholewheat, spaghetti, dried, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 329.0,
+    "protein": 12.6,
+    "carbs": 68.3,
+    "fat": 2.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-718",
+      "foodName": "Pasta, wholewheat, spaghetti, dried, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "a090c010-36ed-5b25-b319-fb6bc246df8d",
+    "name": "Peanut butter, smooth",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 607.0,
+    "protein": 22.8,
+    "carbs": 13.1,
+    "fat": 51.8,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "14-892",
+      "foodName": "Peanut butter, smooth",
+      "trace": []
+    }
+  },
+  {
+    "id": "8f7cf324-4dee-5337-958d-9e3d7c38eabe",
+    "name": "Peas, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 79.0,
+    "protein": 6.7,
+    "carbs": 10.0,
+    "fat": 1.6,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-439",
+      "foodName": "Peas, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "4de5e1a8-2f43-5267-8076-4018200d3c43",
+    "name": "Peas, frozen, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 70.0,
+    "protein": 5.5,
+    "carbs": 11.2,
+    "fat": 0.7,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-536",
+      "foodName": "Peas, frozen, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "f83fb865-1067-5c91-abfd-ce781ebb6408",
+    "name": "Peas, frozen, microwaved",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 71.0,
+    "protein": 5.7,
+    "carbs": 10.8,
+    "fat": 0.9,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-528",
+      "foodName": "Peas, frozen, microwaved",
+      "trace": []
+    }
+  },
+  {
+    "id": "815f5754-816f-5760-b617-3c4ee193bc08",
+    "name": "Peas, frozen, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 68.0,
+    "protein": 5.3,
+    "carbs": 10.7,
+    "fat": 0.7,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-527",
+      "foodName": "Peas, frozen, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "429fe45d-304d-548a-b03f-29e2f523a61b",
+    "name": "Peas, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 83.0,
+    "protein": 6.9,
+    "carbs": 11.3,
+    "fat": 1.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-438",
+      "foodName": "Peas, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "a0cd4155-2673-5274-b8da-9be39c6b317f",
+    "name": "Peppers, capsicum, green, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 18.0,
+    "protein": 1.0,
+    "carbs": 2.6,
+    "fat": 0.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-548",
+      "foodName": "Peppers, capsicum, green, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "0bd475a1-c66c-56a6-9742-f1ad10ef3a62",
+    "name": "Peppers, capsicum, green, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 15.0,
+    "protein": 0.8,
+    "carbs": 2.6,
+    "fat": 0.3,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-318",
+      "foodName": "Peppers, capsicum, green, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "9ec0a993-62da-5012-98cb-fc7add935005",
+    "name": "Porridge oats, unfortified",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 381.0,
+    "protein": 10.9,
+    "carbs": 70.7,
+    "fat": 8.1,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-788",
+      "foodName": "Porridge oats, unfortified",
+      "trace": []
+    }
+  },
+  {
+    "id": "4b038a0c-ff8e-5d41-9186-6e26e970b0e7",
+    "name": "Potatoes, old, baked, flesh and skin",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 97.0,
+    "protein": 2.5,
+    "carbs": 22.6,
+    "fat": 0.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-491",
+      "foodName": "Potatoes, old, baked, flesh and skin",
+      "trace": []
+    }
+  },
+  {
+    "id": "c8050f01-9839-5f31-aad9-25b7199c2aa1",
+    "name": "Potatoes, old, boiled in unsalted water, flesh only",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 74.0,
+    "protein": 1.8,
+    "carbs": 17.5,
+    "fat": 0.1,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-490",
+      "foodName": "Potatoes, old, boiled in unsalted water, flesh only",
+      "trace": []
+    }
+  },
+  {
+    "id": "ecbeb9cd-5c1e-5cff-88b3-b5b1d9d99a5c",
+    "name": "Potatoes, old, raw, flesh only",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 82.0,
+    "protein": 1.9,
+    "carbs": 19.6,
+    "fat": 0.1,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-489",
+      "foodName": "Potatoes, old, raw, flesh only",
+      "trace": []
+    }
+  },
+  {
+    "id": "a65ada50-d084-5ad1-91e2-103fd67a9a23",
+    "name": "Quinoa, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 309.0,
+    "protein": 13.8,
+    "carbs": 55.7,
+    "fat": 5.0,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "14-843",
+      "foodName": "Quinoa, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "7268cebb-e003-5935-b8d4-547a31fec19b",
+    "name": "Rice, brown, wholegrain, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 132.0,
+    "protein": 3.6,
+    "carbs": 29.2,
+    "fat": 0.9,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-869",
+      "foodName": "Rice, brown, wholegrain, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "e8f2e0fb-5339-51cd-ac82-b8e71727ab56",
+    "name": "Rice, brown, wholegrain, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 333.0,
+    "protein": 7.7,
+    "carbs": 77.0,
+    "fat": 1.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-868",
+      "foodName": "Rice, brown, wholegrain, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "41c7e474-b60d-550d-90fd-2f0296028968",
+    "name": "Rice, white, basmati, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 117.0,
+    "protein": 2.8,
+    "carbs": 26.5,
+    "fat": 0.7,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-858",
+      "foodName": "Rice, white, basmati, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "f74f8644-ff70-5a62-bbe5-89e24c3d7170",
+    "name": "Rice, white, basmati, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 351.0,
+    "protein": 8.1,
+    "carbs": 83.7,
+    "fat": 0.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-857",
+      "foodName": "Rice, white, basmati, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "7126eedd-194b-53db-8863-23b671def2ef",
+    "name": "Rice, white, long grain, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 131.0,
+    "protein": 2.8,
+    "carbs": 31.1,
+    "fat": 0.4,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-862",
+      "foodName": "Rice, white, long grain, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "e146e2cb-e592-561f-862b-47c8383d372d",
+    "name": "Rice, white, long grain, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 355.0,
+    "protein": 6.7,
+    "carbs": 85.1,
+    "fat": 1.0,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "11-861",
+      "foodName": "Rice, white, long grain, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "8e1bec21-546a-550b-891d-8f0bbe0f8109",
+    "name": "Salmon, farmed, flesh only, baked",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 232.0,
+    "protein": 25.2,
+    "carbs": 0.0,
+    "fat": 14.6,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "16-359",
+      "foodName": "Salmon, farmed, flesh only, baked",
+      "trace": []
+    }
+  },
+  {
+    "id": "ad8d0008-71c3-53b9-a895-aa79d02a6db3",
+    "name": "Salmon, farmed, flesh only, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 217.0,
+    "protein": 20.4,
+    "carbs": 0.0,
+    "fat": 15.0,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "16-356",
+      "foodName": "Salmon, farmed, flesh only, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "3f9657ff-d8be-5ff8-bc54-f11146f4c9e1",
+    "name": "Spinach, baby, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 20.0,
+    "protein": 3.2,
+    "carbs": 0.2,
+    "fat": 0.7,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-550",
+      "foodName": "Spinach, baby, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "487f70f2-fc8d-5adb-837e-07cde07f5601",
+    "name": "Spinach, baby, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 16.0,
+    "protein": 2.6,
+    "carbs": 0.2,
+    "fat": 0.6,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-521",
+      "foodName": "Spinach, baby, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "d543be12-5e47-598f-9a9c-263c51b2feb7",
+    "name": "Strawberries, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 30.0,
+    "protein": 0.6,
+    "carbs": 6.1,
+    "fat": 0.5,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "14-324",
+      "foodName": "Strawberries, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "51286ed0-fa75-51b6-b68f-661cebc5dc6a",
+    "name": "Sweet potato, flesh only, boiled in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 58.0,
+    "protein": 1.7,
+    "carbs": 13.0,
+    "fat": 0.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-646",
+      "foodName": "Sweet potato, flesh only, boiled in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "3bc8de9e-3f28-51ad-b719-b4e3c794ea20",
+    "name": "Sweet potato, raw, flesh only",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 87.0,
+    "protein": 1.2,
+    "carbs": 21.3,
+    "fat": 0.3,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-463",
+      "foodName": "Sweet potato, raw, flesh only",
+      "trace": []
+    }
+  },
+  {
+    "id": "bb54e52a-95c8-5053-a2cb-4de995b131fb",
+    "name": "Sweet potato, steamed",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 84.0,
+    "protein": 1.1,
+    "carbs": 20.4,
+    "fat": 0.3,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-671",
+      "foodName": "Sweet potato, steamed",
+      "trace": []
+    }
+  },
+  {
+    "id": "d2678e18-93e4-548a-b8e3-1d77aba0a6e3",
+    "name": "Sweetcorn, kernels, boiled 'on the cob' in unsalted water",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 67.0,
+    "protein": 3.6,
+    "carbs": 9.5,
+    "fat": 1.9,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-508",
+      "foodName": "Sweetcorn, kernels, boiled 'on the cob' in unsalted water",
+      "trace": []
+    }
+  },
+  {
+    "id": "82dfdc6d-1666-5706-900c-567e8f4a69a1",
+    "name": "Sweetcorn, kernels, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 60.0,
+    "protein": 3.4,
+    "carbs": 8.1,
+    "fat": 1.8,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-622",
+      "foodName": "Sweetcorn, kernels, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "2df35142-26b0-5ee2-b430-f43a64e0d833",
+    "name": "Tomatoes, standard, grilled, flesh and seeds only",
+    "unit": "g",
+    "preparation": "cooked",
+    "kcal": 17.0,
+    "protein": 0.6,
+    "carbs": 3.4,
+    "fat": 0.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-518",
+      "foodName": "Tomatoes, standard, grilled, flesh and seeds only",
+      "trace": []
+    }
+  },
+  {
+    "id": "a596f620-5b5f-5a46-9256-fac35ac8448f",
+    "name": "Tomatoes, standard, raw",
+    "unit": "g",
+    "preparation": "raw",
+    "kcal": 14.0,
+    "protein": 0.5,
+    "carbs": 3.0,
+    "fat": 0.1,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "13-517",
+      "foodName": "Tomatoes, standard, raw",
+      "trace": []
+    }
+  },
+  {
+    "id": "fd13297e-cac9-5d40-bc41-bd9be765f1fb",
+    "name": "Yogurt, Greek style, plain",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 133.0,
+    "protein": 5.7,
+    "carbs": 4.8,
+    "fat": 10.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-555",
+      "foodName": "Yogurt, Greek style, plain",
+      "trace": []
+    }
+  },
+  {
+    "id": "19f291ec-0875-5dee-8519-5b1ec4b731d6",
+    "name": "Yogurt, low fat, plain",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 57.0,
+    "protein": 4.8,
+    "carbs": 7.8,
+    "fat": 1.0,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-379",
+      "foodName": "Yogurt, low fat, plain",
+      "trace": []
+    }
+  },
+  {
+    "id": "acd60974-b596-5f6d-970c-629c92a499d0",
+    "name": "Yogurt, virtually fat free/diet, plain",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 54.0,
+    "protein": 5.4,
+    "carbs": 8.2,
+    "fat": 0.2,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-533",
+      "foodName": "Yogurt, virtually fat free/diet, plain",
+      "trace": []
+    }
+  },
+  {
+    "id": "74c72326-63bc-5219-98ac-f8ea48d1438e",
+    "name": "Yogurt, whole milk, plain",
+    "unit": "g",
+    "preparation": "as_sold",
+    "kcal": 79.0,
+    "protein": 5.7,
+    "carbs": 7.8,
+    "fat": 3.0,
+    "source": {
+      "dataset": "CoFID2021",
+      "code": "12-184",
+      "foodName": "Yogurt, whole milk, plain",
+      "trace": []
+    }
+  }
+]

@@ -1,0 +1,358 @@
+[
+  {
+    "code": "11-788",
+    "preparation": "raw"
+  },
+  {
+    "code": "11-857",
+    "preparation": "raw"
+  },
+  {
+    "code": "11-861",
+    "preparation": "raw"
+  },
+  {
+    "code": "11-868",
+    "preparation": "raw"
+  },
+  {
+    "code": "11-716",
+    "preparation": "raw"
+  },
+  {
+    "code": "11-718",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-489",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-463",
+    "preparation": "raw"
+  },
+  {
+    "code": "18-469",
+    "preparation": "raw"
+  },
+  {
+    "code": "18-508",
+    "preparation": "raw"
+  },
+  {
+    "code": "16-356",
+    "preparation": "raw"
+  },
+  {
+    "code": "12-937",
+    "preparation": "raw"
+  },
+  {
+    "code": "12-938",
+    "preparation": "raw"
+  },
+  {
+    "code": "14-319",
+    "preparation": "raw"
+  },
+  {
+    "code": "14-318",
+    "preparation": "raw"
+  },
+  {
+    "code": "14-325",
+    "preparation": "raw"
+  },
+  {
+    "code": "14-324",
+    "preparation": "raw"
+  },
+  {
+    "code": "14-386",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-502",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-521",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-657",
+    "preparation": "raw"
+  },
+  {
+    "code": "14-896",
+    "preparation": "raw"
+  },
+  {
+    "code": "18-289",
+    "preparation": "raw"
+  },
+  {
+    "code": "18-290",
+    "preparation": "raw"
+  },
+  {
+    "code": "11-901",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-523",
+    "preparation": "raw"
+  },
+  {
+    "code": "14-371",
+    "preparation": "raw"
+  },
+  {
+    "code": "14-843",
+    "preparation": "raw"
+  },
+  {
+    "code": "11-858",
+    "preparation": "cooked"
+  },
+  {
+    "code": "11-862",
+    "preparation": "cooked"
+  },
+  {
+    "code": "11-869",
+    "preparation": "cooked"
+  },
+  {
+    "code": "11-1129",
+    "preparation": "cooked"
+  },
+  {
+    "code": "11-723",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-490",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-491",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-646",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-671",
+    "preparation": "cooked"
+  },
+  {
+    "code": "18-323",
+    "preparation": "cooked"
+  },
+  {
+    "code": "18-507",
+    "preparation": "cooked"
+  },
+  {
+    "code": "16-359",
+    "preparation": "cooked"
+  },
+  {
+    "code": "12-940",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-503",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-504",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-550",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-658",
+    "preparation": "cooked"
+  },
+  {
+    "code": "18-329",
+    "preparation": "cooked"
+  },
+  {
+    "code": "18-330",
+    "preparation": "cooked"
+  },
+  {
+    "code": "11-902",
+    "preparation": "cooked"
+  },
+  {
+    "code": "12-596",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "12-313",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "12-307",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "12-555",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "14-394",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "14-892",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "17-685",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "17-661",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "11-1145",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "11-981",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "12-539",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "12-550",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "17-050",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "17-038",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "12-379",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "12-533",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "12-184",
+    "preparation": "as_sold"
+  },
+  {
+    "code": "13-438",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-527",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-496",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-514",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-512",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-627",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-505",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-499",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-318",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-622",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-517",
+    "preparation": "raw"
+  },
+  {
+    "code": "13-439",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-536",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-528",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-497",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-498",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-515",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-513",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-628",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-506",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-500",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-548",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-508",
+    "preparation": "cooked"
+  },
+  {
+    "code": "13-518",
+    "preparation": "cooked"
+  }
+]

@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import ts from 'typescript';
+process.env.TZ='Europe/London';
+const source=await readFile(new URL('../lib/date-range.ts',import.meta.url),'utf8');
+const mod={};new Function('exports',ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText)(mod);
+const now=new Date('2026-10-10T10:00:00+01:00');
+const check=(p,o,start,end,date=now)=>{const r=mod.getDateRange(p,o,date);assert.equal(r.start,start);assert.equal(r.end,end);assert.ok(mod.inRange(start,r));assert.ok(mod.inRange(end,r));};
+check('week',0,'2026-10-05','2026-10-10');check('week',-1,'2026-09-28','2026-10-04');
+check('month',-1,'2026-09-01','2026-09-30');check('year',-1,'2025-01-01','2025-12-31');
+check('month',-1,'2024-02-01','2024-02-29',new Date('2024-03-31T12:00:00'));
+check('today',-1,'2025-12-31','2025-12-31',new Date('2026-01-01T12:00:00'));
+check('week',0,'2026-03-23','2026-03-29',new Date('2026-03-29T12:00:00'));
+assert.equal(mod.dayNumber('2026-03-30')-mod.dayNumber('2026-03-29'),1);
+const all=mod.getDateRange('all',0,now,'2023-02-01');assert.equal(all.start,'2023-02-01');assert.equal(all.end,'2026-10-10');assert.ok(!mod.inRange('2026-10-11',all));
+console.log('PASS: shared day/week/month/year/all-time ranges, Monday weeks, leap years, year rollover, inclusive boundaries and DST chart spacing.');
